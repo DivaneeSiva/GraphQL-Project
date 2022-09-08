@@ -1,0 +1,26 @@
+schema {
+    query: Query,
+    
+}
+
+type Patient {
+    patientId : ID!,
+    patientName :String,
+    age :Integer, 
+    mobileNo:String,
+    doctorId :Integer
+    
+}
+
+type Doctor {
+    doctorId : ID!,
+    doctorName : String,
+    specialization : String
+}
+
+type Query{
+    getPatientById(patientId:Integer) : Patient
+    getAllPatients:[Patient]
+    getAllDoctors:[Doctor]
+    
+}
